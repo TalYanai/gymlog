@@ -1,0 +1,201 @@
+/* GymLog v2 — Step 2d.0 shell. V3 palette (decision Q6); no glass/blur. Mobile-first, RTL. */
+:root{--bg:#0f1115;--card:#1a1d24;--line:#2a2f3a;--txt:#eef0f4;--mut:#8b93a3;--acc:#3ddc97;--danger:#ff6b6b;--warn:#ffd166}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+body{min-height:100vh;padding-bottom:calc(var(--nav-h,56px) + 24px + env(safe-area-inset-bottom))}
+main{padding:16px;max-width:640px;margin:0 auto}
+h1{font-size:22px;margin:8px 0 12px}
+.hint{color:var(--mut);font-size:14px}
+input,select,textarea{font-size:16px;background:#12151b;color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:10px;width:100%;min-width:0;font-family:inherit}
+button{font-size:15px;border:0;border-radius:10px;padding:11px 14px;min-height:44px;background:#262b36;color:var(--txt);cursor:pointer;font-family:inherit}
+button.pri{background:var(--acc);color:#0b0d10;font-weight:600}
+nav#nav{position:fixed;bottom:0;left:0;right:0;z-index:15;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav#nav a{flex:1;text-align:center;padding:14px 4px;min-height:52px;color:var(--mut);text-decoration:none;font-size:15px}
+nav#nav a.on{color:var(--acc);font-weight:600}
+.status{position:sticky;top:0;z-index:5;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--card)}
+.status p{margin:6px 0 0;font-size:14px;color:var(--mut)}
+.status-error{border-bottom:2px solid var(--danger)}
+.status-error strong::before{content:"🔴 "}
+.status-warn,.status-stale{border-bottom:2px solid var(--warn)}
+.status-saving,.status-pending,.status-busy{font-size:14px;color:var(--mut);padding:6px 16px}
+.status-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+dialog.sheet{background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:14px;max-width:min(92vw,520px)}
+dialog.sheet pre{white-space:pre-wrap;font-family:inherit;direction:rtl}
+bdi{unicode-bidi:isolate}
+/* Step 2d.1: startup, migration, import and recovery screens */
+h2{font-size:17px;margin:4px 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+button.danger{background:#3a1f24;color:var(--danger)}
+button[disabled]{opacity:.45;cursor:not-allowed}
+button.link{background:none;color:var(--acc);padding:6px 0;min-height:0;text-align:start}
+a.button{display:inline-block;text-align:center;border-radius:10px;padding:11px 14px;background:#262b36;color:var(--txt);text-decoration:none}
+a.button.pri{background:var(--acc);color:#0b0d10;font-weight:600}
+.note{margin:6px 0;font-size:14px;color:var(--mut)}
+.note-warn{color:var(--warn)}
+.note-error{color:var(--danger)}
+.note-ok{color:var(--acc)}
+.banner{border-radius:12px;padding:10px 12px;margin:8px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line)}
+.banner p{margin:4px 0;font-size:14px;color:var(--mut);flex-basis:100%}
+.banner-warn{border-color:var(--warn)}
+.overlay{position:fixed;inset:0;z-index:20;background:rgba(15,17,21,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:20px}
+label.check,div.check{display:flex;gap:10px;align-items:center;font-size:15px}
+label.check input,label.radio input{width:22px;height:22px;flex:none}
+label.radio{display:flex;gap:6px;align-items:center;font-size:14px}
+ul.checks{list-style:none;padding:0;margin:8px 0}
+ul.checks li{padding:4px 0}
+.check-failed{color:var(--danger)}
+.check-skipped{color:var(--mut)}
+.big{font-size:18px;font-weight:600;margin:0}
+.late-item{border-bottom:1px solid var(--line);padding:8px 0}
+details{margin:8px 0}
+details pre{white-space:pre-wrap;font-size:12px;direction:ltr;text-align:left;overflow-x:auto}
+ul.list{list-style:none;padding:0}
+[hidden]{display:none!important}
+/* Step 2d.2: Workout tab */
+ul.templates{list-style:none;padding:0;margin:8px 0;display:flex;flex-direction:column;gap:10px}
+button.template{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:start;padding:14px;border-radius:14px;background:var(--card);border:1px solid var(--line);min-height:64px}
+button.template:active{border-color:var(--acc)}
+.template-name{font-size:18px;font-weight:600}
+.template-meta{font-size:13px;color:var(--mut)}
+.template-list{font-size:12px;color:var(--mut);overflow:hidden;max-width:100%;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.4}
+button.template-empty{align-items:center;margin-top:4px}
+.workout-head h2{font-size:20px;margin:4px 0 0}
+.perf h3{font-size:16px;margin:0}
+.perf-order{color:var(--mut)}
+ol.sets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px}
+li.set{display:grid;grid-template-columns:24px 1fr 44px 32px;gap:6px;align-items:center;padding:6px;border-radius:10px;background:#151922;font-size:15px}
+li.set.done{outline:1px solid var(--acc)}
+.set-n{color:var(--mut);font-size:13px}
+.set-v{text-align:end}
+.set-c{color:var(--acc);text-align:center}
+.perf-note{color:var(--mut);margin:0}
+dialog.picker{width:min(560px,100vw);max-height:90vh}
+dialog.picker input[type=search]{flex:1;min-width:0;padding:10px;border-radius:10px;border:1px solid var(--line);background:#151922;color:var(--txt);font-size:16px}
+.picker-list{overflow-y:auto;max-height:70vh}
+.picker-group h4{margin:12px 0 6px;color:var(--mut);font-size:13px}
+button.picker-item{display:block;width:100%;text-align:start;margin:4px 0}
+/* Step 2d.3: logging */
+.perf-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+button.small{font-size:13px;color:var(--mut)}
+.set-labels{display:grid;grid-template-columns:24px 1fr 44px 32px;gap:6px;padding:0 6px;font-size:11px;color:var(--mut)}
+.set-fields{display:flex;gap:6px;min-width:0}
+.set-fields>*{flex:1 1 0;min-width:0}
+.set-labels .set-fields span{text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+input.in,select.in{width:100%;min-width:0;height:44px;padding:0 8px;border-radius:9px;border:1px solid var(--line);background:#0f1115;color:var(--txt);font-size:17px;text-align:center}
+select.in{font-size:13px;padding:0 4px}
+input.in[aria-invalid="true"]{border-color:var(--danger)}
+input.in:focus,select.in:focus{outline:2px solid var(--acc);outline-offset:0}
+button.tick{height:44px;min-height:44px;padding:0;border-radius:10px;font-size:20px;background:#262b36;color:var(--mut)}
+button.tick[aria-pressed="true"]{background:var(--acc);color:#0b0d10}
+button.del{height:44px;min-height:44px;padding:0;background:none;color:var(--mut);font-size:20px}
+li.set.done{outline:none;background:#14251f}
+li.set.done input.in{border-color:#24563f}
+button.add-set{align-self:flex-start}
+textarea.perf-note-in{width:100%;border-radius:10px;border:1px solid var(--line);background:#0f1115;color:var(--txt);font-size:16px;padding:8px;box-sizing:border-box}
+ul.recovery{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+ul.recovery li{border-bottom:1px solid var(--line);padding-bottom:6px}
+pre.raw{white-space:pre-wrap;word-break:break-all;direction:ltr;text-align:left;font-size:12px;max-height:200px;overflow:auto}
+.finish-row{margin-top:20px}
+/* Step 2d.5: history */
+h3.month{font-size:13px;color:var(--mut);margin:16px 0 6px}
+ul.history{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+a.history-row{display:grid;grid-template-columns:72px 1fr;grid-template-rows:auto auto;gap:2px 10px;padding:12px;border-radius:12px;background:var(--card);border:1px solid var(--line);color:var(--txt);text-decoration:none}
+.history-date{grid-row:span 2;color:var(--mut);font-size:13px;align-self:center}
+.history-title{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.history-meta{font-size:12px;color:var(--mut);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.badge{font-size:11px;padding:1px 6px;border-radius:6px;background:#262b36;color:var(--mut)}
+.badge-warn{color:var(--warn)}
+.session-note{white-space:pre-wrap}
+/* Step 2d.6: progress */
+svg.spark{width:100%;height:60px;display:block;margin:6px 0}
+svg.spark polyline{fill:none;stroke:var(--acc);stroke-width:2}
+ol.timeline{padding-inline-start:18px;margin:6px 0;font-size:14px}
+ol.timeline a{color:var(--acc)}
+[data-form="goal"] label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--mut)}
+ul.goals{display:flex;flex-direction:column;gap:8px}
+/* Step 2d.7: manage */
+nav.subnav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+ol.tpl-items{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.tpl-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tpl-fields label,[data-view^="manage"] label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--mut)}
+li.ex-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+li.ex-row .row{margin:0;flex-wrap:nowrap}
+
+/* ---- 2e: update bar ---- */
+.update-bar { position: fixed; inset-inline: 12px; bottom: calc(76px + env(safe-area-inset-bottom)); z-index: 30; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 10px 12px; border-radius: 12px; background: #1c2a24; border: 1px solid #3ddc97; color: inherit; }
+.update-bar span { flex: 1 1 160px; }
+
+/* ---- 2f: Garmin CSV import ---- */
+.csv-act { border-top: 1px solid var(--line, #2a2f38); padding-top: 8px; margin-top: 8px; }
+.csv-rows { list-style: none; padding: 0; margin: 6px 0; display: grid; gap: 6px; }
+.csv-rows li { display: grid; gap: 4px; }
+.field { display: grid; gap: 4px; margin: 8px 0; }
+
+/* ---- launch: imported source line under a set ---- */
+.set-source { grid-column: 1 / -1; margin: 0 0 4px; font-size: 0.8rem; }
+
+.col{display:flex;flex-direction:column;gap:8px;margin:12px 0}
+.back-select{margin-bottom:8px}
+.chart-wrap{margin:8px 0}
+svg.chart{width:100%;height:auto;max-height:200px;display:block}
+svg.chart .axis{stroke:var(--line);stroke-width:1}
+svg.chart .trace{fill:none;stroke:var(--acc);stroke-width:2}
+svg.chart .dot{fill:var(--acc)}
+svg.chart .dot.last{stroke:var(--txt);stroke-width:1.5}
+svg.chart .grid{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4}
+svg.chart .lbl{fill:var(--mut);font-size:10px}
+.key-chart{gap:6px}
+.kc-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.kc-nums{display:flex;gap:28px}
+.kc-nums>div{display:flex;flex-direction:column}
+.kc-n{font-size:26px;font-weight:700;line-height:1.1}
+.metric-tabs{margin:4px 0}
+
+/* ---- Personal Records (PR) & Weekly/Monthly Comparisons ---- */
+.progress-subnav{margin:6px 0 14px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.section-header-row{justify-content:space-between;align-items:flex-start}
+[data-form="manual-record"] label,.compare-selector-col label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--mut)}
+.pr-card-head{justify-content:space-between;align-items:center;margin:0}
+.pr-card-head h3{margin:0;font-size:16px}
+.pr-record-list{margin:4px 0 0;display:flex;flex-direction:column;gap:10px}
+.pr-record-row{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:6px}
+.pr-best-line{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:15px}
+.pr-best-val{font-weight:600;color:var(--txt)}
+.badge-auto{background:#1b3329;color:var(--acc)}
+.badge-manual{background:#2d2538;color:#d0bfff}
+.pr-manual-items{display:flex;flex-direction:column;gap:6px;margin-top:4px;padding:8px 10px;border-radius:10px;background:#14171f;border:1px solid var(--line)}
+.pr-manual-entry{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.pr-manual-actions{margin:0;gap:10px}
+.compare-selectors-card{gap:12px}
+.compare-selector-col{display:flex;flex-direction:column;gap:6px}
+.compare-cards-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:560px){.compare-cards-grid{grid-template-columns:1fr 1fr}}
+.compare-partial-card{border-color:var(--warn)}
+.compare-metrics-list{margin:4px 0 0;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.compare-ex-list{margin:6px 0 0;display:flex;flex-direction:column;gap:10px}
+.compare-ex-item{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:4px}
+.main-record{gap:2px}
+.mr-row{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line)}
+.mr-row:first-of-type{border-top:0}
+.mr-v{font-size:22px;font-weight:700;text-align:end}
+.mr-empty .mr-v{color:var(--mut);font-weight:400}
+.mr-meta{grid-column:1 / -1;font-size:12px}
+.mr-meta:empty{display:none}
+
+/* Israeli date field (single-workout import): text DD/MM/YYYY + calendar button + in-app calendar fallback */
+.date-field { display: grid; gap: 6px; min-width: 0; max-width: 100%; }
+.date-row { position: relative; display: flex; gap: 8px; align-items: stretch; }
+.date-text { flex: 1; min-width: 0; text-align: center; }
+.cal-open { flex: none; min-width: 48px; border: 1px solid var(--line, #333); border-radius: 10px; background: transparent; color: inherit; font-size: 20px; cursor: pointer; }
+.date-native { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
+.cal { box-sizing: border-box; max-width: 100%; min-width: 0; border: 1px solid var(--line, #333); border-radius: 12px; padding: 8px; }
+.cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.cal-nav { border: 0; background: transparent; color: inherit; font-size: 24px; min-width: 44px; min-height: 40px; cursor: pointer; }
+.cal-row { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px; }
+.cal-wd { font-size: 12px; opacity: 0.7; text-align: center; margin-bottom: 2px; }
+.cal-day { min-width: 0; padding: 0; min-height: 40px; border: 0; border-radius: 8px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.cal-day.today { outline: 1px solid currentColor; }
+.cal-day.sel { background: var(--accent, #3ddc97); color: #04130c; font-weight: 700; }
+.cal-day:disabled { opacity: 0.3; cursor: default; }
+.cal [hidden], .date-error[hidden] { display: none; }

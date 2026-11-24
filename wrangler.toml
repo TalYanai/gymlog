@@ -1,0 +1,18 @@
+# GymLog on Cloudflare: one Worker that serves the static app (dist/) and the sync API, with one D1 database.
+# Nothing secret lives here. The shared sync token is a Worker secret:  wrangler secret put SYNC_TOKEN
+# Create your own database with `wrangler d1 create gymlog` and paste its id below (free plan).
+name = "gymlog-tal"
+main = "worker/index.js"
+compatibility_date = "2026-06-01"
+
+preview_urls = false
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gymlog"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

@@ -1,0 +1,1004 @@
+{
+  "format": "gymlog-seed-defaults",
+  "formatVersion": 1,
+  "schemaVersion": 2,
+  "exercises": [
+    {
+      "id": "ex_bench_press",
+      "version": 1,
+      "name": "Bench Press",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "מוט",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_smith_incline_press",
+      "version": 1,
+      "name": "Smith Incline Press",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "מכונה",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_incline_barbell_press",
+      "version": 1,
+      "name": "Incline Barbell Press",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "מוט",
+      "variantGroup": "incline_press",
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_incline_db_press",
+      "version": 1,
+      "name": "Incline DB Press",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "דמבל",
+      "variantGroup": "incline_press",
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_cable_crossover_fly",
+      "version": 1,
+      "name": "Cable Crossover Fly",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "כבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_side",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_fly_15_machine",
+      "version": 1,
+      "name": "Fly 15° (Machine)",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "מכונה",
+      "variantGroup": "fly_15",
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_fly_15_db",
+      "version": 1,
+      "name": "Fly 15° (DB)",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "דמבל",
+      "variantGroup": "fly_15",
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_bench_press_rep_and_a_quarter",
+      "version": 1,
+      "name": "Bench Press Rep-and-a-Quarter",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "מוט",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_elevated_push_ups",
+      "version": 1,
+      "name": "Elevated Push-Ups",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "משקל גוף",
+      "variantGroup": null,
+      "measurement": {
+        "type": "bodyweight_reps",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_weighted_dips",
+      "version": 1,
+      "name": "Weighted Dips",
+      "aliases": [],
+      "group": "חזה",
+      "equipment": "משקל גוף",
+      "variantGroup": null,
+      "measurement": {
+        "type": "bodyweight_plus_load",
+        "loadBasis": "added",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_weighted_pull_up",
+      "version": 1,
+      "name": "Weighted Pull-Up",
+      "aliases": [],
+      "group": "גב",
+      "equipment": "משקל גוף",
+      "variantGroup": null,
+      "measurement": {
+        "type": "bodyweight_plus_load",
+        "loadBasis": "added",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_one_arm_db_row",
+      "version": 1,
+      "name": "One-Arm DB Row",
+      "aliases": [],
+      "group": "גב",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": "per_side"
+      }
+    },
+    {
+      "id": "ex_lat_pulldown",
+      "version": 1,
+      "name": "Lat Pulldown",
+      "aliases": [],
+      "group": "גב",
+      "equipment": "מכונה",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_db_curl",
+      "version": 1,
+      "name": "DB Curl",
+      "aliases": [],
+      "group": "ביספס",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_cable_curl_stretch",
+      "version": 1,
+      "name": "Cable Curl (Stretch)",
+      "aliases": [],
+      "group": "ביספס",
+      "equipment": "כבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_preacher_curl_machine",
+      "version": 1,
+      "name": "Preacher Curl (Machine)",
+      "aliases": [],
+      "group": "ביספס",
+      "equipment": "מכונה",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_seated_side_curl",
+      "version": 1,
+      "name": "Seated Side Curl",
+      "aliases": [],
+      "group": "ביספס",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_incline_db_curl",
+      "version": 1,
+      "name": "Incline DB Curl",
+      "aliases": [],
+      "group": "ביספס",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_eccentric_cable_curl",
+      "version": 1,
+      "name": "Eccentric Cable Curl",
+      "aliases": [],
+      "group": "ביספס",
+      "equipment": "כבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_overhead_extension",
+      "version": 1,
+      "name": "Overhead Extension",
+      "aliases": [],
+      "group": "טריספס",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_db_skull_crusher",
+      "version": 1,
+      "name": "DB Skull Crusher",
+      "aliases": [],
+      "group": "טריספס",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_single_arm_overhead_extension_cable",
+      "version": 1,
+      "name": "Single-Arm Overhead Extension (Cable)",
+      "aliases": [],
+      "group": "טריספס",
+      "equipment": "כבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_side",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": "per_side"
+      }
+    },
+    {
+      "id": "ex_rope_pushdown",
+      "version": 1,
+      "name": "Rope Pushdown",
+      "aliases": [],
+      "group": "טריספס",
+      "equipment": "כבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_db_shoulder_press",
+      "version": 1,
+      "name": "DB Shoulder Press",
+      "aliases": [],
+      "group": "כתפיים",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_lateral_raise",
+      "version": 1,
+      "name": "Lateral Raise",
+      "aliases": [],
+      "group": "כתפיים",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_walking_lunges",
+      "version": 1,
+      "name": "Walking Lunges",
+      "aliases": [],
+      "group": "רגליים",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "load_distance",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_goblet_squat",
+      "version": 1,
+      "name": "Goblet Squat",
+      "aliases": [],
+      "group": "רגליים",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_deadlift",
+      "version": 1,
+      "name": "Deadlift",
+      "aliases": [],
+      "group": "רגליים",
+      "equipment": "מוט",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_farmers_carry",
+      "version": 1,
+      "name": "Farmers Carry",
+      "aliases": [],
+      "group": "הירוקס",
+      "equipment": "דמבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "load_distance",
+        "loadBasis": "per_hand",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_wall_ball",
+      "version": 1,
+      "name": "Wall Ball",
+      "aliases": [],
+      "group": "הירוקס",
+      "equipment": "אחר",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "implement",
+        "loadUnit": "kg",
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_burpee",
+      "version": 1,
+      "name": "Burpee",
+      "aliases": [],
+      "group": "הירוקס",
+      "equipment": "משקל גוף",
+      "variantGroup": null,
+      "measurement": {
+        "type": "bodyweight_reps",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_inverted_row",
+      "version": 1,
+      "name": "Inverted Row",
+      "aliases": [],
+      "group": "גב",
+      "equipment": "משקל גוף",
+      "variantGroup": null,
+      "measurement": {
+        "type": "bodyweight_reps",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_rowing_machine",
+      "version": 1,
+      "name": "Rowing Machine",
+      "aliases": [],
+      "group": "קרדיו",
+      "equipment": "מכונה",
+      "variantGroup": null,
+      "measurement": {
+        "type": "distance_duration",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_run",
+      "version": 1,
+      "name": "Run",
+      "aliases": [],
+      "group": "קרדיו",
+      "equipment": "אחר",
+      "variantGroup": null,
+      "measurement": {
+        "type": "distance_duration",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_hanging_leg_raise",
+      "version": 1,
+      "name": "Hanging Leg Raise",
+      "aliases": [],
+      "group": "בטן",
+      "equipment": "משקל גוף",
+      "variantGroup": null,
+      "measurement": {
+        "type": "bodyweight_reps",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_cable_crunch",
+      "version": 1,
+      "name": "Cable Crunch",
+      "aliases": [],
+      "group": "בטן",
+      "equipment": "כבל",
+      "variantGroup": null,
+      "measurement": {
+        "type": "weight_reps",
+        "loadBasis": "total",
+        "loadUnit": "kg",
+        "volumeFactor": 1,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_ab_wheel",
+      "version": 1,
+      "name": "Ab Wheel",
+      "aliases": [],
+      "group": "בטן",
+      "equipment": "אחר",
+      "variantGroup": null,
+      "measurement": {
+        "type": "bodyweight_reps",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_plank",
+      "version": 1,
+      "name": "Plank",
+      "aliases": [],
+      "group": "בטן",
+      "equipment": "משקל גוף",
+      "variantGroup": null,
+      "measurement": {
+        "type": "duration",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    },
+    {
+      "id": "ex_crossfit_class",
+      "version": 1,
+      "name": "CrossFit Class (Fit)",
+      "aliases": [],
+      "group": "קרוספיט",
+      "equipment": "אחר",
+      "variantGroup": null,
+      "measurement": {
+        "type": "note",
+        "loadBasis": null,
+        "loadUnit": null,
+        "volumeFactor": null,
+        "repsBasis": null
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl_push_a",
+      "version": 1,
+      "name": "Push A",
+      "items": [
+        {
+          "id": "tpi_push_a_01",
+          "exerciseId": "ex_cable_curl_stretch",
+          "order": 1,
+          "plannedSets": 2,
+          "targetReps": {
+            "min": 8,
+            "max": 10
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_a_02",
+          "exerciseId": "ex_preacher_curl_machine",
+          "order": 2,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 15
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_a_03",
+          "exerciseId": "ex_seated_side_curl",
+          "order": 3,
+          "plannedSets": 2,
+          "targetReps": {
+            "min": 10,
+            "max": 12
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_a_04",
+          "exerciseId": "ex_bench_press",
+          "order": 4,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 6,
+            "max": 8
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_a_05",
+          "exerciseId": "ex_incline_db_press",
+          "order": 5,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 10
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_a_06",
+          "exerciseId": "ex_fly_15_db",
+          "order": 6,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 10
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_a_07",
+          "exerciseId": "ex_elevated_push_ups",
+          "order": 7,
+          "plannedSets": 2,
+          "targetReps": null,
+          "targetNote": "עד כשל"
+        }
+      ]
+    },
+    {
+      "id": "tpl_push_b",
+      "version": 1,
+      "name": "Pull B",
+      "items": [
+        {
+          "id": "tpi_push_b_01",
+          "exerciseId": "ex_incline_db_curl",
+          "order": 1,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 8
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_b_02",
+          "exerciseId": "ex_eccentric_cable_curl",
+          "order": 2,
+          "plannedSets": 3,
+          "targetReps": null,
+          "targetNote": "עד כשל"
+        },
+        {
+          "id": "tpi_push_b_03",
+          "exerciseId": "ex_seated_side_curl",
+          "order": 3,
+          "plannedSets": 2,
+          "targetReps": {
+            "min": 10,
+            "max": 12
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_b_04",
+          "exerciseId": "ex_smith_incline_press",
+          "order": 4,
+          "plannedSets": 4,
+          "targetReps": {
+            "min": 6,
+            "max": 12
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_b_05",
+          "exerciseId": "ex_cable_crossover_fly",
+          "order": 5,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 10,
+            "max": 12
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_b_06",
+          "exerciseId": "ex_bench_press_rep_and_a_quarter",
+          "order": 6,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 10
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_b_07",
+          "exerciseId": "ex_cable_crunch",
+          "order": 7,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 12,
+            "max": 15
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_push_b_08",
+          "exerciseId": "ex_hanging_leg_raise",
+          "order": 8,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 10,
+            "max": 12
+          },
+          "targetNote": null
+        }
+      ]
+    },
+    {
+      "id": "tpl_heavy_pull_day",
+      "version": 1,
+      "name": "Heavy Pull Day",
+      "items": [
+        {
+          "id": "tpi_heavy_pull_day_01",
+          "exerciseId": "ex_weighted_pull_up",
+          "order": 1,
+          "plannedSets": 4,
+          "targetReps": {
+            "min": 3,
+            "max": 3
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_heavy_pull_day_02",
+          "exerciseId": "ex_one_arm_db_row",
+          "order": 2,
+          "plannedSets": 4,
+          "targetReps": {
+            "min": 9,
+            "max": 9
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_heavy_pull_day_03",
+          "exerciseId": "ex_lat_pulldown",
+          "order": 3,
+          "plannedSets": 3,
+          "targetReps": null,
+          "targetNote": null
+        },
+        {
+          "id": "tpi_heavy_pull_day_04",
+          "exerciseId": "ex_overhead_extension",
+          "order": 4,
+          "plannedSets": 2,
+          "targetReps": {
+            "min": 8,
+            "max": 10
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_heavy_pull_day_05",
+          "exerciseId": "ex_db_skull_crusher",
+          "order": 5,
+          "plannedSets": 2,
+          "targetReps": {
+            "min": 8,
+            "max": 8
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_heavy_pull_day_06",
+          "exerciseId": "ex_hanging_leg_raise",
+          "order": 6,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 10,
+            "max": 12
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_heavy_pull_day_07",
+          "exerciseId": "ex_cable_crunch",
+          "order": 7,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 12,
+            "max": 15
+          },
+          "targetNote": null
+        }
+      ]
+    },
+    {
+      "id": "tpl_hyrox_friday",
+      "version": 1,
+      "name": "HYROX Friday",
+      "items": []
+    },
+    {
+      "id": "tpl_run",
+      "version": 1,
+      "name": "Run",
+      "items": [
+        {
+          "id": "tpi_run_01",
+          "exerciseId": "ex_run",
+          "order": 1,
+          "plannedSets": 1,
+          "targetReps": null,
+          "targetNote": "5–7 ק״מ"
+        }
+      ]
+    },
+    {
+      "id": "tpl_arms_abs",
+      "version": 1,
+      "name": "Arms + Abs",
+      "items": [
+        {
+          "id": "tpi_arms_abs_01",
+          "exerciseId": "ex_incline_db_curl",
+          "order": 1,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 8
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_arms_abs_02",
+          "exerciseId": "ex_eccentric_cable_curl",
+          "order": 2,
+          "plannedSets": 3,
+          "targetReps": null,
+          "targetNote": "עד כשל"
+        },
+        {
+          "id": "tpi_arms_abs_03",
+          "exerciseId": "ex_rope_pushdown",
+          "order": 3,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 10
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_arms_abs_04",
+          "exerciseId": "ex_single_arm_overhead_extension_cable",
+          "order": 4,
+          "plannedSets": 2,
+          "targetReps": {
+            "min": 8,
+            "max": 8
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_arms_abs_05",
+          "exerciseId": "ex_lateral_raise",
+          "order": 5,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 12,
+            "max": 15
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_arms_abs_06",
+          "exerciseId": "ex_cable_crunch",
+          "order": 6,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 12,
+            "max": 15
+          },
+          "targetNote": null
+        },
+        {
+          "id": "tpi_arms_abs_07",
+          "exerciseId": "ex_ab_wheel",
+          "order": 7,
+          "plannedSets": 3,
+          "targetReps": {
+            "min": 8,
+            "max": 10
+          },
+          "targetNote": null
+        }
+      ]
+    },
+    {
+      "id": "tpl_crossfit_class",
+      "version": 1,
+      "name": "CrossFit Class",
+      "items": [
+        {
+          "id": "tpi_crossfit_class_01",
+          "exerciseId": "ex_crossfit_class",
+          "order": 1,
+          "plannedSets": 0,
+          "targetReps": null,
+          "targetNote": null
+        }
+      ]
+    }
+  ]
+}

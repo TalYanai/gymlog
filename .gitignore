@@ -1,0 +1,42 @@
+# Personal workout data, exports, backups, and archives (NEVER COMMIT)
+Garmin_Data/
+garmin_data/
+gymlog-personal.json
+gymlog-personal*.json
+unified_workouts.csv
+*.csv
+gymlog-backup-*.json
+gymlog-import-*.json
+gymlog-pre-*.json
+gymlog-v2-raw-*.json
+gymlog-v2-state-*.json
+gymlog-source-*.json
+gymlog-previous-copy-*.json
+gymlog-dist-*.zip
+*.zip
+*.fit
+*.tcx
+*.gpx
+*.kmz
+*.bak
+
+# Build & distribution output
+dist/
+build/
+.wrangler/
+
+# Dependencies & environment
+node_modules/
+.env
+.env.*
+*.local
+
+# OS & editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Server backups / merged personal stores
+premigration/
+.claude/

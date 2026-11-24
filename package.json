@@ -1,0 +1,15 @@
+{
+  "name": "gymlog-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "GymLog V2 — Personal Workout Tracking Application (Vanilla ES Modules PWA)",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build": "node scripts/build-dist.mjs",
+    "dev": "node scripts/dev-server.mjs"
+  }
+}
